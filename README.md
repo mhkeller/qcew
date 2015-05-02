@@ -15,23 +15,23 @@ The module has three functions, which you would use as below. For documentation 
 
 All functions can take an optional `format` parameter as the last argument to determine the data format you'll receive. If nothing is set, the data will come back as Json. The options are:
 
-* `'json'` — The default. Returns an array of objects.
+* `'json'` — The default and needs not be specified. Returns an array of objects. 
 * `'csv'` — Returns the data as a csv string, which is how the API sends it. Useful for writing out to a file.
 * `'rows'` — Returns an array of arrays representing each row in the data. The first array contains the header values.
 
-#### *getAreaData(year, quarter, area, callback, format)* 
+#### *getAreaData(year, quarter, area, callback[, format])* 
 
 This function takes a year, quarter, and area argument and returns data containing the associated area data. Use 'a' for annual averages. 
 
 For all area codes and titles see: <http://www.bls.gov/cew/doc/titles/area/area_titles.htm>
 
-#### *getIndustryData(year, quarter, industry_code, callback, format)*
+#### *getIndustryData(year, quarter, industry_code, callback[, format])*
 
 This function takes a year, quarter, and industry code and returns data containing the associated industry data. Use 'a' for annual averages. Some industry codes contain hyphens. The CSV files use underscores instead of hyphens. So 31-33 becomes 31_33. 
 
 For all industry codes and titles see: <http://www.bls.gov/cew/doc/titles/industry/industry_titles.htm>
 
-#### *qcewGetSizeData(year, establishmen_size_class_code, callback, format)*
+#### *qcewGetSizeData(year, establishment_size_class_code, callback[, format])*
 
 This function takes a year and establishment size class code and returns data containing the associated size data. Size data is only available for the first quarter of each year.
 
@@ -53,7 +53,7 @@ qcew.getAreaData('2013','1','26000', function(err, areaData){
 	} else {
 		console.log(err);
 	}
-}, 'json');
+});
 
 qcew.getIndustryData('2013','1','3361', function(err, autoManufacturing){
 	if (!err){
