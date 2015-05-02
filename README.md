@@ -23,19 +23,19 @@ All functions can take an optional `format` parameter as the last argument to de
 
 This function takes a year, quarter, and area argument and returns data containing the associated area data. Use 'a' for annual averages. 
 
-For all area codes and titles see: http://www.bls.gov/cew/doc/titles/area/area_titles.htm
+For all area codes and titles see: <http://www.bls.gov/cew/doc/titles/area/area_titles.htm>
 
 #### *getIndustryData(year, quarter, industry_code, callback, format)*
 
 This function takes a year, quarter, and industry code and returns data containing the associated industry data. Use 'a' for annual averages. Some industry codes contain hyphens. The CSV files use underscores instead of hyphens. So 31-33 becomes 31_33. 
 
-For all industry codes and titles see: http://www.bls.gov/cew/doc/titles/industry/industry_titles.htm
+For all industry codes and titles see: <http://www.bls.gov/cew/doc/titles/industry/industry_titles.htm>
 
 #### *qcewGetSizeData(year, establishmen_size_class_code, callback, format)*
 
 This function takes a year and establishment size class code and returns data containing the associated size data. Size data is only available for the first quarter of each year.
 
-For all establishment size classes and titles see: http://www.bls.gov/cew/doc/titles/size/size_titles.htm
+For all establishment size classes and titles see: <http://www.bls.gov/cew/doc/titles/size/size_titles.htm>
 
 
 ## Example
