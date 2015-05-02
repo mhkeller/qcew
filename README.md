@@ -16,7 +16,7 @@ The module has three functions, which you would use as below. For documentation 
 All functions can take an optional `format` parameter as the last argument to determine the data format you'll receive. If nothing is set, the data will come back as Json. The options are:
 
 * `'json'` — The default and needs not be specified. Returns an array of objects. 
-* `'csv'` — Returns the data as a csv string, which is how the API sends it. Useful for writing out to a file.
+* `'csv'` — Returns the data as a csv string — how the API sends it. Useful for writing data to file.
 * `'rows'` — Returns an array of arrays representing each row in the data. The first array contains the header values.
 
 #### *getAreaData(year, quarter, area, callback[, format])* 
@@ -36,7 +36,6 @@ For all industry codes and titles see: <http://www.bls.gov/cew/doc/titles/indust
 This function takes a year and establishment size class code and returns data containing the associated size data. Size data is only available for the first quarter of each year.
 
 For all establishment size classes and titles see: <http://www.bls.gov/cew/doc/titles/size/size_titles.htm>
-
 
 ## Example
 
