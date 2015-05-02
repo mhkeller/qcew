@@ -8,7 +8,7 @@ If `'csv'` is passed as the format, it will return the data as it comes from the
 which is a csv.
 If `rows` is passed it will return an array of arrays, the first one being the header row.
 */ 
-function qcewRequestToData(urlPath, cb, format){
+function qcewRequestToData(urlPath, callback, format){
 	var formatters = {
 		json: function(body){
 			return dsv.csv.parse(body);
@@ -30,9 +30,9 @@ function qcewRequestToData(urlPath, cb, format){
 		var data;
 		if (!err && response.statusCode == 200){
 			data = formatters[format](body);
-			cb(null, data);
+			callback(null, data);
 		} else {
-			cb(err);
+			callback(err);
 		}
 	});
 }
@@ -44,22 +44,22 @@ averages.
 For all area codes and titles see:
 http://www.bls.gov/cew/doc/titles/area/area_titles.htm
 */ 
-function qcewGetAreaData(year, qtr, area, cb, format){
+function qcewGetAreaData(year, qtr, area, callback, format){
 	var urlPath = 'http://www.bls.gov/cew/data/api/'+year+'/'+qtr+'/area/'+area+'.csv';
-	qcewRequestToData(urlPath, cb, format);
+	qcewRequestToData(urlPath, callback, format);
 }
 
 /* *******************************************************************************
 qcewGetIndustryData : This function takes a year, quarter, and industry code
-and data containing the associated industry data. Use 'a' for 
+and returns data containing the associated industry data. Use 'a' for 
 annual averages. Some industry codes contain hyphens. The CSV files use
 underscores instead of hyphens. So 31-33 becomes 31_33. 
 For all industry codes and titles see:
 http://www.bls.gov/cew/doc/titles/industry/industry_titles.htm
 */
-function qcewGetIndustryData(year, qtr, industry, cb, format){
+function qcewGetIndustryData(year, qtr, industry, callback, format){
 	var urlPath = 'http://www.bls.gov/cew/data/api/'+year+'/'+qtr+'/industry/'+industry+'.csv';
-	qcewRequestToData(urlPath, cb, format);
+	qcewRequestToData(urlPath, callback, format);
 }
 
 /* *******************************************************************************
@@ -69,9 +69,9 @@ is only available for the first quarter of each year.
 For all establishment size classes and titles see:
 http://www.bls.gov/cew/doc/titles/size/size_titles.htm
 */
-function qcewGetSizeData(year, size, cb, format){
+function qcewGetSizeData(year, size, callback, format){
 	var urlPath = 'http://www.bls.gov/cew/data/api/'+year+'/1/size/'+size+'.csv';
-	qcewRequestToData(urlPath, cb, format);
+	qcewRequestToData(urlPath, callback, format);
 }
 
 module.exports = {

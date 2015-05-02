@@ -1,5 +1,9 @@
 var qcew = require('../index.js'); // Note: Change this to `require('qcew')` when using the module in your own script.
 
+// Data output format can be `json`, `csv` or `rows`. 
+// If no value is passed as the last argument, `json` will be returned.
+// `rows` will return an array of arrays representing the desired table.
+
 qcew.getAreaData('2013','1','26000', function(err, areaData){
 	if (!err){
 		console.log(areaData);
