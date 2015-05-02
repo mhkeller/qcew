@@ -1,0 +1,34 @@
+{
+  "name": "qcew",
+  "version": "1.0.0",
+  "description": "Interface for querying Bureau of Labor Statistics Quarterly Census of Employment and Wages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mhkeller/qcew.git"
+  },
+  "keywords": [
+    "BLS",
+    "bureau of labor statistics",
+    "labor",
+    "wages",
+    "wage data",
+    "employment",
+    "employment data",
+    "qcew",
+    "economics"
+  ],
+  "author": "Michael Keller",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mhkeller/qcew/issues"
+  },
+  "homepage": "https://github.com/mhkeller/qcew",
+  "dependencies": {
+    "dsv": "0.0.4",
+    "request": "^2.55.0"
+  }
+}
