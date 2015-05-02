@@ -31,7 +31,7 @@ This function takes a year, quarter, and industry code and returns data containi
 
 For all industry codes and titles see: <http://www.bls.gov/cew/doc/titles/industry/industry_titles.htm>
 
-#### *qcewGetSizeData(year, establishment_size_class_code, callback[, format])*
+#### *getSizeData(year, establishment_size_class_code, callback[, format])*
 
 This function takes a year and establishment size class code and returns data containing the associated size data. Size data is only available for the first quarter of each year.
 
