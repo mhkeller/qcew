@@ -3,6 +3,8 @@ QCEW
 
 An NodeJs interface for [Bureau of Labor Statistics Quarterly Census of Employment and Wages](http://www.bls.gov/cew/home.htm) data. For other languages, see the [QCEW Open Data Access](http://www.bls.gov/cew/doc/access/data_access_examples.htm) page. This setup borrows from the Python and PHP/JavaScript examples for code samples and documentation.
 
+*Note: I am not affiliated in any way with BLS.*
+
 ## Installation
 
 ````
