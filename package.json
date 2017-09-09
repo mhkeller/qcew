@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/mhkeller/qcew",
   "dependencies": {
-    "dsv": "0.0.4",
+    "d3-dsv": "^1.0.7",
     "request": "^2.55.0"
   }
 }
