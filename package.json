@@ -1,6 +1,6 @@
 {
   "name": "qcew",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Interface for querying Bureau of Labor Statistics Quarterly Census of Employment and Wages",
   "main": "index.js",
   "scripts": {
